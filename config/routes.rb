@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   #mount APIS::Base => '/api'
   resources :opps
+  resources :organisations
   devise_for :volunteers, :controllers => { registrations: 'registrations' }
   root 'application#index'
-  mount APIS::Base => '/api'
   get 'devise/sessions#destroy', to: 'application#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

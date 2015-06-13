@@ -8,6 +8,10 @@
 <% if volunteer_signed_in? %>
   <h1>Hey there!</h1>
   <%= link_to "Sign out", destroy_volunteer_session_path, :method => :delete %>
+  <%= link_to "New Organisation", new_organisation_path %> 
+  <% @organisations.each do |organisation| %> 
+    <p class="organisation"><%= link_to organisation.name, organisation%></p>
+    <% end %>
 <% else %>
   <h1>Communiteer</h1>
   <p>Sign up today!</p>

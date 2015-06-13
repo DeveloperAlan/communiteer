@@ -1,0 +1,8 @@
+<h1><%= @organisation.name %></h1>
+
+<p> 
+  <%= @organisation.description %> 
+  </p>
+
+<p><%= link_to "Edit Organisation", edit_organisation_path %></p>
+<p><%= link_to "Delete Organisation", @organisation, method: :delete, data: { confirm: "Are you sure?"} %></p>
