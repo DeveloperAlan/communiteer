@@ -5,7 +5,13 @@
   <title>Document</title>
 </head>
 <body>
+<% if volunteer_signed_in? %>
+  <h1>Hey there!</h1>
+<% else %>
+  <h1>Communiteer</h1>
+  <p>Sign up today!</p>
   <%= link_to "Sign In", new_volunteer_session_path %>
   <%= link_to "Sign Up", new_volunteer_registration_path %>
+<% end %>
 </body>
 </html>
