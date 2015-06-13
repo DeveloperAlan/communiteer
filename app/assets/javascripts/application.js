@@ -12,3 +12,5 @@
 //
 //= require react_ujs
 
+
+$(function(){ $(document).foundation(); });

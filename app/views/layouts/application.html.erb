@@ -6,9 +6,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render partial: 'layouts/header' %>
+  <div id="main">
   <%= yield %>
+  </div>
+  <%= render partial: 'layouts/footer' %>
 
-  <%= webpack_manifest_script %> 
+  <%= webpack_manifest_script %>
   <%= javascript_include_tag 'modernizr' %>
   <%= webpack_bundle_tag 'main' %>
   <%= javascript_include_tag 'application' %>
