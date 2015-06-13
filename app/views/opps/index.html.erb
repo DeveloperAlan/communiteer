@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th>Name</th>
+      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,9 +14,6 @@
       <tr>
         <td><%= link_to opp.name, opp %></td>
         <td><%= opp.description %></td>
-        <td><%= link_to 'Show', opp %></td>
-        <td><%= link_to 'Edit', edit_post_path(opp) %></td>
-        <td><%= link_to 'Destroy', opp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,7 +21,4 @@
 
 <br>
 
-<%=
-#link_to 'New Post', new_opp_path
-%>
-
+<%= link_to 'New Opportunity', new_opp_path %>

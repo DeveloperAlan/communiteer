@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get 'opps/show'
+
   #mount APIS::Base => '/api'
   devise_for :volunteers
-  root 'application#index'
-  mount APIS::Base => '/api'
+  root 'opps#index'
+
+
+  resources :opps
+
+  #mount APIS::Base => '/api'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
