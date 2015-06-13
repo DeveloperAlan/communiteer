@@ -1,7 +1,5 @@
 Rails.application.configure do
   config.webpack[:use_manifest] = true
-  config.react.variant = :development
-  config.react.addons = true
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
