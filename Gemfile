@@ -81,8 +81,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
 end
-# react jsx compile
-gem 'react-rails'
 # font awesome
 gem 'font-awesome-rails'
 # grape api
