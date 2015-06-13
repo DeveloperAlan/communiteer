@@ -11,4 +11,5 @@
 // about supported directives.
 //
 //= require react_ujs
-
+//= require jquery
+//= require jquery_ujs

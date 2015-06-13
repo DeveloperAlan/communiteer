@@ -29,7 +29,7 @@ before_action :find_organisation, only: [:show, :edit, :update, :destroy]
   end 
 
   def destroy 
-    @organisation.destroy
+    @organisation.destroy()
     redirect_to root_path
   end
 private 
