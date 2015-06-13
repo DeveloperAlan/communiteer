@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #mount APIS::Base => '/api'
-  devise_for :volunteers
+  devise_for :volunteers, :controllers => { registrations: 'registrations' }
   root 'application#index'
   mount APIS::Base => '/api'
   get 'devise/sessions#destroy', to: 'application#index'
