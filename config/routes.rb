@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'opps/index'
-
-  root 'opps#index'
   #mount APIS::Base => '/api'
   devise_for :volunteers
   root 'application#index'
