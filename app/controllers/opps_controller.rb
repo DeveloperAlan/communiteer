@@ -13,6 +13,8 @@ class OppsController < ApplicationController
     @opp = Opp.new
   end
 
+
+
   def create
     @opp = Opp.new(opp_params)
 
