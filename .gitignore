@@ -17,5 +17,4 @@
 /tmp
 app/assets/javascripts/build
 node_modules
-public/assets
 app/frontend
