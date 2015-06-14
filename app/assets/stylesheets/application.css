@@ -14,3 +14,6 @@
  *= require foundation_and_overrides
 
  */
+
+@import "bootstrap.min.css";
+@import "bootstrap-theme.min.css";

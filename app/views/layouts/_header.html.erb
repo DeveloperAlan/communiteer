@@ -1,29 +1,24 @@
-<nav class="top-bar">
-  <ul class="title-area">
-    <li class="name">
-      <h1>
-        <%= link_to 'Home', root_path %>
-      </h1>
-    </li>
-    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
-      <li class="divider hide-for-small"></li>
-      <li>
-        <%= link_to 'Github', 'https://github.com/reInteractive-open' %>
-      </li>
-
-      <li class="divider hide-for-small"></li>
-      <li>
-        <%= link_to 'Twitter', 'https://twitter.com/' %>
-      </li>
-
-      <li class="divider hide-for-small"></li>
-      <li>
-        <%= link_to 'About me', '/about' %>
-      </li>
-    </ul>
-  </section>
-</nav>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="assets/images/logo-solo.png" style="height:50px;width:50px;" />
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Committed Opps</a></li>
+                    <li><a href="#">My Account</a></li>
+                    <!--<li><a href="#">Profile</a></li>
+                    <li><a href="#">Help</a></li>-->
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="Search..." style="height: auto; margin: 0 0 0 0">
+                </form>
+            </div>
+        </div>
+    </nav>
