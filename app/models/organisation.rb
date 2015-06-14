@@ -1,4 +1,4 @@
 class Organisation < ActiveRecord::Base
-  has_many :Volunteers
-  has_many :Opps
+  has_many :volunteers
+  has_many :opps
 end
