@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150614012810) do
+ActiveRecord::Schema.define(version: 20150614030640) do
 
   create_table "causes", force: :cascade do |t|
     t.string   "name"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20150614012810) do
     t.text     "description"
     t.integer  "organisation_id"
     t.datetime "due_by"
+    t.string   "work_required"
   end
 
   add_index "opps", ["organisation_id"], name: "index_opps_on_organisation_id"

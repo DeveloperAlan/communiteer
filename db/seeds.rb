@@ -101,6 +101,7 @@ logo_design = Opp.create(
   name: 'Conference logo design',
   description: 'We have our 2015 National Cancer Conference in 2 months and we need a new logo that aligns closely with our "prevention" theme.',
   organisation: red_cross,
+  work_required: '1h',
   due_by: '2015-06-30',
   skills: [
     design
@@ -111,6 +112,7 @@ volunteer_pr = Opp.create(
   name: 'Volunteer PR',
   description: 'Education East Africa is looking for an experienced publicist to assist us with increased media exposure. We look forward to hearing from you!',
   organisation: cure_our_kids,
+  work_required: '8h+',
   due_by: '2015-07-15',
   skills: [
     public_relation
@@ -133,6 +135,7 @@ Thanks for being awesome!
 If you would like to help our organization in the future, add us to your favourites.',
   organisation: salvation_army,
   due_by: '2015-06-26',
+  work_required: '4h',
   skills: [
     social_media
   ]
@@ -143,6 +146,7 @@ satisfaction_survey = Opp.create(
   description: 'We need help putting together a brief survey to collect information about employee satisfaction survey. We need something tight and easy but that gathers as much usable ',
   organisation: oxfam,
   due_by: '2015-07-27',
+  work_required: '2h',
   skills: [
     human_resources
   ]
