@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'linkedin/index'
+
   get 'opps/show'
 
   #mount APIS::Base => '/api'

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/logo-solo.png">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <!--<div class="page">
+        <h1>Linkedin Integration</h1>
+
+        <ul id="js-messages">
+            <li>Messages from our code will appear here.</li>
+        </ul>
+    </div>-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- The following displays a Linkedin Login button
+         The callback in data-onAuth will be called when the user is logged in
+         The callback in data-onLogout will be called when the user logs out
+      -->
+    <!--
+         This loads the Linkedin JS API.
+         The onLoad callback is called when the Linkedin JS API has been loaded.
+    -->
+    <script type="text/javascript" src="http://platform.linkedin.com/in.js">
+        api_key: 75dzuxicwzqe4h
+        onLoad:  onLinkedInLoad
+        authorize: true
+    </script>
+
+    <!--<script type="text/javascript" src="linkedin.js"></script>-->
+    <script type="text/javascript">
+
+        // Setup an event listener to make an API call once auth is complete
+        function onLinkedInLoad() {
+        }
+
+        // Handle the successful return from the API call
+        function onSuccess(data) {
+            window.location.replace("/opps");
+        }
+
+        // Handle an error response from the API call
+        function onError(error) {
+            alert(error);
+        }
+
+        // Use the API call wrapper to request the member's basic profile data
+        function getProfileData() {
+            IN.API.Raw("/people/~").result(onSuccess).error(onError);
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div style="padding-left:600px;padding-top:200px;">
+                <script type="IN/Login" data-onauth="getProfileData">
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
