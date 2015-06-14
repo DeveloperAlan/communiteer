@@ -1,18 +1,42 @@
-<h1>Welcome back <%= current_volunteer.first_name %></h1>
+<br/>
+<table style="border:none">
+  <tr>
+    <td><img width="80" height="80" src ="http://www.clker.com/cliparts/5/6/3/a/1194984675331456830utente_singolo_architett_01.svg.hi.png" /></td>
+    <td>
+      <table style="border:none">
+        <tr>
+          <td>
+            <h1>Welcome back <%= current_volunteer.first_name %></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Level 3-10 Kudos
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
+      <td>Latest Opportunities</td>
+      <td>Commitment</td>
+      <td>Time Left</td>
+      <td width=50>Committed Vollies</td>
+      <td></td>
     </tr>
   </thead>
-
   <tbody>
     <% @opps.each do |opp| %>
       <tr>
         <td><%= link_to opp.name, opp %></td>
-        <td><%= opp.description %></td>
+        <td><%= opp.work_required %></td>
+        <td><%= distance_of_time_in_words Time.now, opp.due_by %></td>
+        <td>3</td>
+        <td><img width="80" height="80" src="<%= opp.organisation.image %>" /></td>
       </tr>
     <% end %>
   </tbody>
