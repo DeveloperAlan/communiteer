@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150613130601) do
+ActiveRecord::Schema.define(version: 20150614012810) do
 
   create_table "causes", force: :cascade do |t|
     t.string   "name"
@@ -29,13 +29,23 @@ ActiveRecord::Schema.define(version: 20150613130601) do
   add_index "commitments", ["organisation_id"], name: "index_commitments_on_organisation_id"
   add_index "commitments", ["volunteer_id"], name: "index_commitments_on_volunteer_id"
 
+  create_table "opp_skills", force: :cascade do |t|
+    t.integer  "opp_id"
+    t.integer  "skill_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "opp_skills", ["opp_id"], name: "index_opp_skills_on_opp_id"
+  add_index "opp_skills", ["skill_id"], name: "index_opp_skills_on_skill_id"
+
   create_table "opps", force: :cascade do |t|
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.string   "name"
     t.text     "description"
     t.integer  "organisation_id"
-    t.datetime "DueBy"
+    t.datetime "due_by"
   end
 
   add_index "opps", ["organisation_id"], name: "index_opps_on_organisation_id"
@@ -61,6 +71,16 @@ ActiveRecord::Schema.define(version: 20150613130601) do
     t.string   "name"
     t.text     "description"
   end
+
+  create_table "volunteer_skills", force: :cascade do |t|
+    t.integer  "volunteer_id"
+    t.integer  "skill_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "volunteer_skills", ["skill_id"], name: "index_volunteer_skills_on_skill_id"
+  add_index "volunteer_skills", ["volunteer_id"], name: "index_volunteer_skills_on_volunteer_id"
 
   create_table "volunteers", force: :cascade do |t|
     t.string   "first_name"
