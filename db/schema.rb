@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20150614030640) do
     t.string   "name"
     t.text     "description"
     t.integer  "organisation_id"
-    t.datetime "DueBy"
+    t.datetime "due_by"
     t.string   "work_required"
   end
 
