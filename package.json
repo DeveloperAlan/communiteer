@@ -12,7 +12,6 @@
     "react-hot-loader": "*",
   },
   "dependencies": {
-    "chunk-manifest-webpack-plugin": "*",
     "babel": "*",
     "babel-core": "*",
     "babel-loader": "*",
@@ -24,7 +23,6 @@
     "jquery": "*",
     "lodash": "*",
     "superagent": "*",
-
   },
   "scripts": {
     "test": "mocha --watch --compilers js:compiler.js 'app/frontend/javascripts/**/*-test.js'",
