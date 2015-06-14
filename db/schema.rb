@@ -11,14 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150613062259) do
+ActiveRecord::Schema.define(version: 20150613130601) do
+
+  create_table "causes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "commitments", force: :cascade do |t|
+    t.integer  "volunteer_id"
+    t.integer  "organisation_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "commitments", ["organisation_id"], name: "index_commitments_on_organisation_id"
+  add_index "commitments", ["volunteer_id"], name: "index_commitments_on_volunteer_id"
 
   create_table "opps", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.string   "name"
     t.text     "description"
+    t.integer  "organisation_id"
+    t.datetime "DueBy"
   end
+
+  add_index "opps", ["organisation_id"], name: "index_opps_on_organisation_id"
 
   create_table "organisation_volunteers", force: :cascade do |t|
     t.datetime "created_at",      null: false
