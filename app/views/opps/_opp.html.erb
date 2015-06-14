@@ -3,7 +3,7 @@
     padding: 0px;
     width: 45px;
     text-align: center;
-    font-family: Arial;             
+    font-family: Arial;
     font-size: 28px;
     font-weight: bold;    /* options are normal, bold, bolder, lighter */
     font-style: normal;   /* options are normal or italic */
@@ -39,7 +39,7 @@
 Count down until any date script-
 By JavaScript Kit (www.javascriptkit.com)
 Over 200+ free scripts here!
-Modified by Robert M. Kuhnhenn, D.O. 
+Modified by Robert M. Kuhnhenn, D.O.
 on 5/30/2006 to count down to a specific date AND time,
 on 10/20/2007 to a new format, and 1/10/2010 to include
 time zone offset.
@@ -101,7 +101,7 @@ function countdown(yr,m,d,hr,min){
 </script>
 
 
- <h2><img src="http://upload.wikimedia.org/wikipedia/commons/3/31/Ice_Cream_dessert_02.jpg" style="width: 50px; height: 50px"/>  <%= link_to_unless_current opp.name, opp %></h2>
+ <h2><img width="80" height="80" src="<%= opp.organisation.image %>"/>  <%= link_to_unless_current opp.name, opp %></h2>
  <body onload="countdown(year,month,day,hour,minute)">
 <div id="time" style="width: auto; height: 100px; background-color: #666666; margin: 2px;">
   <div class="button" style="float:right; margin: 20px;">Get involved now!</div>
@@ -132,6 +132,6 @@ function countdown(yr,m,d,hr,min){
  <%= simple_format opp.description %>
 
 <h2>Skills required</h2>
-<p>TML CSS PHP Web Design Web Layout Graphic Design</p>
+<p><%= opp.skills.first.name %></p>
 
 <div class="button">Get Involved Now!</div>
